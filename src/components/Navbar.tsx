@@ -87,7 +87,7 @@ export default function Navbar() {
                   Raymond Towa Group
                 </span>
                 <span className="text-[10px] font-medium tracking-[0.18em] uppercase text-graphite-muted">
-                  LTDA · Serviços Terceirizados
+                  Serviços Terceirizados
                 </span>
               </div>
             </Link>

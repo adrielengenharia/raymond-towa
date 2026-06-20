@@ -90,9 +90,9 @@ export default function HeroSection() {
           >
             {/* Label */}
             <motion.div variants={itemVariants} className="flex items-center gap-3">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gold/8 border border-gold/20">
-                <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                <span className="section-label text-[11px]">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/8 border border-gold/20">
+                <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
+                <span className="section-label text-[9px] sm:text-[11px] whitespace-nowrap tracking-[0.15em] sm:tracking-[0.25em]">
                   Recreio dos Bandeirantes · Rio de Janeiro
                 </span>
               </div>
@@ -133,14 +133,6 @@ export default function HeroSection() {
               residenciais premium.
             </motion.p>
 
-            {/* Data de fundação */}
-            <motion.div variants={itemVariants} className="flex items-center gap-2">
-              <div className="gold-divider" />
-              <span className="text-xs tracking-widest uppercase text-graphite-muted font-medium">
-                Fundada em 17 de Outubro de 2025
-              </span>
-              <div className="gold-divider" />
-            </motion.div>
 
             {/* CTAs */}
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
@@ -242,7 +234,7 @@ export default function HeroSection() {
 
       {/* ── Scroll Indicator ── */}
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
+        className="hidden sm:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 cursor-pointer"
         initial={{ opacity: 1 }}
         onClick={() => document.querySelector("#servicos")?.scrollIntoView({ behavior: "smooth" })}
         aria-label="Rolar para serviços"

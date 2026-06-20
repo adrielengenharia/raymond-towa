@@ -142,7 +142,7 @@ export default function AboutSection() {
             </div>
 
             {/* Pilares */}
-            <div className="grid grid-cols-1 gap-4 mt-2">
+            <div className="hidden sm:grid grid-cols-1 gap-4 mt-2">
               {PILLARS.map(({ icon: Icon, title, description }, i) => (
                 <motion.div
                   key={title}

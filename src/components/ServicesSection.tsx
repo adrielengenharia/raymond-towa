@@ -298,7 +298,7 @@ export default function ServicesSection() {
         <SectionHeader />
 
         {/* Bento Grid Assimétrico */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 auto-rows-min">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 auto-rows-min">
           {/* Row 1 — Large cards */}
           <div className="md:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[0]} index={0} />

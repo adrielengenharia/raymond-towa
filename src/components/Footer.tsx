@@ -105,7 +105,7 @@ export default function Footer() {
                   Raymond Towa Group
                 </p>
                 <p className="text-[10px] font-medium tracking-widest uppercase text-gold">
-                  LTDA
+                  Serviços Terceirizados
                 </p>
               </div>
             </Link>
