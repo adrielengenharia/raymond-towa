@@ -1,0 +1,204 @@
+/* ═══════════════════════════════════════════════════════════════
+   Raymond Towa Group — Global Styles
+   Design System: Light Luxury · Off-white + Grafite + Dourado
+   ═══════════════════════════════════════════════════════════════ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─────────────────────────────────── */
+:root {
+  --color-cream: #F9FAFB;
+  --color-graphite: #111827;
+  --color-graphite-muted: #4B5563;
+  --color-gold: #B59410;
+  --color-gold-light: #D4AF37;
+  --color-gold-pale: #F5ECC7;
+
+  --radius-card: 20px;
+  --radius-btn: 12px;
+
+  --shadow-card: 0 1px 3px rgba(17,24,39,0.04), 0 8px 32px rgba(17,24,39,0.06);
+  --shadow-card-hover: 0 4px 16px rgba(17,24,39,0.08), 0 24px 64px rgba(17,24,39,0.1);
+  --shadow-gold: 0 0 30px rgba(181,148,16,0.35);
+}
+
+/* ─── Base Layer ────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-graphite);
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-cream);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 3px;
+  }
+
+  /* Selection highlight in brand gold */
+  ::selection {
+    background-color: rgba(181, 148, 16, 0.2);
+    color: var(--color-graphite);
+  }
+}
+
+/* ─── Component Layer ───────────────────────────────────────── */
+@layer components {
+
+  /* Gold line divider — decorative horizontal rule */
+  .gold-divider {
+    @apply w-16 h-px bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  /* Section label — "SOBRE NÓS", "SERVIÇOS", etc. */
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.25em] uppercase text-gold;
+  }
+
+  /* Primary heading style */
+  .heading-display {
+    @apply font-display font-bold leading-tight tracking-tight text-graphite;
+  }
+
+  /* Gold accent text */
+  .text-gold-accent {
+    @apply text-gold font-semibold;
+  }
+
+  /* Primary CTA Button — magnetic WhatsApp */
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 px-8 py-4 rounded-xl
+           bg-gold text-white font-semibold text-sm tracking-wide
+           transition-all duration-300 ease-out
+           hover:bg-gold-light hover:-translate-y-0.5
+           hover:shadow-[0_8px_32px_rgba(181,148,16,0.45)]
+           active:scale-95;
+  }
+
+  /* Ghost outline button */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2.5 px-8 py-4 rounded-xl
+           border border-gold/40 text-graphite font-semibold text-sm tracking-wide
+           transition-all duration-300 ease-out
+           hover:border-gold hover:text-gold hover:bg-gold/5
+           active:scale-95;
+  }
+
+  /* Premium service card */
+  .service-card {
+    @apply relative overflow-hidden rounded-[20px] bg-white
+           border border-graphite/5
+           shadow-[var(--shadow-card)]
+           transition-all duration-500 ease-out
+           hover:shadow-[var(--shadow-card-hover)]
+           hover:-translate-y-1;
+  }
+
+  /* Gold shimmer overlay on hover */
+  .gold-shimmer::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none;
+    background: linear-gradient(135deg, rgba(181,148,16,0.04) 0%, transparent 70%);
+  }
+  .gold-shimmer:hover::after {
+    @apply opacity-100;
+  }
+
+  /* Testimonial card */
+  .testimonial-card {
+    @apply flex-shrink-0 w-80 rounded-2xl bg-white border border-graphite/5
+           shadow-[var(--shadow-card)] p-6 mx-3;
+  }
+
+  /* Nav link */
+  .nav-link {
+    @apply relative text-sm font-medium text-graphite-muted
+           transition-colors duration-200 hover:text-graphite;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-px bg-gold
+           transition-all duration-300;
+  }
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+/* ─── Utility Layer ─────────────────────────────────────────── */
+@layer utilities {
+
+  /* Subtle noise grain texture */
+  .grain {
+    position: relative;
+  }
+  .grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Text gradient gold */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #B59410 0%, #D4AF37 50%, #9A7D0A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Mask for infinite slider */
+  .slider-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+  }
+
+  /* Glass morphism navbar */
+  .glass-nav {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(249, 250, 251, 0.85);
+    border-bottom: 1px solid rgba(181, 148, 16, 0.08);
+  }
+
+  /* Animated glow ring */
+  .glow-ring {
+    box-shadow: 0 0 0 0 rgba(181, 148, 16, 0.4);
+    animation: glow-ring-pulse 2.5s ease-out infinite;
+  }
+
+  @keyframes glow-ring-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(181, 148, 16, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(181, 148, 16, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(181, 148, 16, 0); }
+  }
+}
