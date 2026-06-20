@@ -41,7 +41,7 @@ export default function AboutSection() {
     <section
       id="sobre"
       ref={sectionRef}
-      className="py-24 lg:py-36 relative overflow-hidden"
+      className="py-12 lg:py-36 relative overflow-hidden"
       aria-labelledby="about-heading"
       style={{
         background: "linear-gradient(160deg, #F9FAFB 0%, #F5F0E8 50%, #F9FAFB 100%)",
@@ -71,16 +71,16 @@ export default function AboutSection() {
           <span className="section-label">Nossa Essência</span>
           <h2
             id="about-heading"
-            className="heading-display text-4xl lg:text-5xl mt-4"
+            className="heading-display text-3xl lg:text-5xl mt-4"
           >
             Liderança com{" "}
             <span className="text-gradient-gold">Propósito</span>
           </h2>
-          <div className="gold-divider mx-auto mt-6" />
+          <div className="gold-divider mx-auto mt-4" />
         </motion.div>
 
         {/* Main Grid — 2 colunas */}
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
           {/* ─── Coluna A: Storytelling ─────────────────────────── */}
           <motion.div
@@ -96,7 +96,7 @@ export default function AboutSection() {
                 className="text-gold/20 absolute -top-4 -left-4"
                 fill="currentColor"
               />
-              <p className="text-xl lg:text-2xl font-display font-medium text-graphite leading-relaxed pl-6">
+              <p className="text-base sm:text-xl lg:text-2xl font-display font-medium text-graphite leading-relaxed pl-5 sm:pl-6">
                 "Construímos este grupo sobre um alicerce que nenhum manual ensina:{" "}
                 <span className="text-gold font-semibold">
                   o casamento entre o amor pelo que fazemos e a obsessão pela excelência.
@@ -129,15 +129,15 @@ export default function AboutSection() {
             </div>
 
             {/* Assinatura dos fundadores */}
-            <div className="flex items-center gap-6 pt-4 border-t border-graphite/8">
+            <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-graphite/8">
               <div>
-                <p className="font-display font-bold text-graphite text-lg">Joseli da Silva Raimundo</p>
-                <p className="text-sm text-gold font-medium">CEO · Raymond Towa Group LTDA</p>
+                <p className="font-display font-bold text-graphite text-sm sm:text-lg">Joseli da Silva Raimundo</p>
+                <p className="text-xs sm:text-sm text-gold font-medium">CEO · Raymond Towa Group LTDA</p>
               </div>
-              <div className="w-px h-12 bg-gold/20" />
+              <div className="w-px h-8 sm:h-12 bg-gold/20" />
               <div>
-                <p className="font-display font-bold text-graphite text-lg">Fabio Raimundo</p>
-                <p className="text-sm text-gold font-medium">Co-CEO · Diretor de Operações</p>
+                <p className="font-display font-bold text-graphite text-sm sm:text-lg">Fabio Raimundo</p>
+                <p className="text-xs sm:text-sm text-gold font-medium">Co-CEO · Diretor de Operações</p>
               </div>
             </div>
 
@@ -217,7 +217,7 @@ export default function AboutSection() {
 
               {/* ── Card Secundário: Mão na Massa (sobreposto) ── */}
               <motion.div
-                className="absolute -bottom-10 -right-8 lg:-right-14 w-52 lg:w-60 rounded-2xl overflow-hidden shadow-luxury border-2 border-white z-20 rotate-2"
+                className="hidden sm:block absolute -bottom-10 -right-8 lg:-right-14 w-52 lg:w-60 rounded-2xl overflow-hidden shadow-luxury border-2 border-white z-20 rotate-2"
                 initial={{ opacity: 0, scale: 0.8, rotate: 8 }}
                 animate={isInView ? { opacity: 1, scale: 1, rotate: 2 } : {}}
                 transition={{ delay: 0.7, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -247,7 +247,7 @@ export default function AboutSection() {
 
               {/* ── Legenda Conceitual ── */}
               <motion.div
-                className="absolute -top-6 -left-6 lg:-left-12 bg-white rounded-2xl shadow-luxury px-5 py-4 max-w-[200px] z-20 border border-gold/10"
+                className="hidden sm:block absolute -top-6 -left-6 lg:-left-12 bg-white rounded-2xl shadow-luxury px-5 py-4 max-w-[200px] z-20 border border-gold/10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.9, duration: 0.6 }}
@@ -265,7 +265,7 @@ export default function AboutSection() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center mt-20"
+          className="text-center mt-10 lg:mt-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

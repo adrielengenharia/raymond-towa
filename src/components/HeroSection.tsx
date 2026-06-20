@@ -42,7 +42,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cream"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-cream"
       aria-labelledby="hero-heading"
     >
 
@@ -78,8 +78,8 @@ export default function HeroSection() {
       </div>
 
       {/* ── Main Content ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-0">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-screen">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-12 lg:py-0">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center lg:min-h-screen">
 
           {/* Left — Copy */}
           <motion.div
@@ -102,7 +102,7 @@ export default function HeroSection() {
             <motion.div variants={itemVariants}>
               <h1
                 id="hero-heading"
-                className="font-display font-black text-5xl lg:text-7xl xl:text-[82px] leading-[1.0] tracking-tight text-graphite"
+                className="font-display font-black text-[2.1rem] sm:text-5xl lg:text-7xl xl:text-[82px] leading-[1.05] tracking-tight text-graphite"
               >
                 Soluções{" "}
                 <span className="text-gradient-gold">Complexas,</span>
@@ -125,7 +125,7 @@ export default function HeroSection() {
             {/* Subtítulo */}
             <motion.p
               variants={itemVariants}
-              className="text-lg lg:text-xl text-graphite-muted font-light leading-relaxed max-w-xl"
+              className="text-base lg:text-xl text-graphite-muted font-light leading-relaxed max-w-xl"
             >
               Otimizando seu tempo,{" "}
               <span className="text-graphite font-medium">elevando sua qualidade de vida.</span>{" "}
@@ -167,16 +167,16 @@ export default function HeroSection() {
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap gap-6 pt-4 border-t border-graphite/6"
+              className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:gap-6 pt-4 border-t border-graphite/6"
             >
               {STATS.map(({ value, label, icon: Icon }) => (
-                <div key={label} className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-gold/8 border border-gold/15 flex items-center justify-center flex-shrink-0">
-                    <Icon size={15} className="text-gold" />
+                <div key={label} className="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gold/8 border border-gold/15 flex items-center justify-center flex-shrink-0">
+                    <Icon size={14} className="text-gold" />
                   </div>
-                  <div>
-                    <p className="font-display font-bold text-xl text-graphite leading-none">{value}</p>
-                    <p className="text-xs text-graphite-muted mt-0.5">{label}</p>
+                  <div className="text-center sm:text-left">
+                    <p className="font-display font-bold text-lg sm:text-xl text-graphite leading-none">{value}</p>
+                    <p className="text-[10px] sm:text-xs text-graphite-muted mt-0.5 leading-tight">{label}</p>
                   </div>
                 </div>
               ))}

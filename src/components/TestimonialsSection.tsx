@@ -181,7 +181,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="depoimentos"
-      className="py-24 lg:py-32 overflow-hidden bg-white"
+      className="py-12 lg:py-32 overflow-hidden bg-white"
       aria-labelledby="testimonials-heading"
     >
       {/* Top border accent */}
@@ -191,7 +191,7 @@ export default function TestimonialsSection() {
         {/* Header */}
         <motion.div
           ref={headerRef}
-          className="text-center mb-16"
+          className="text-center mb-8 lg:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -199,13 +199,13 @@ export default function TestimonialsSection() {
           <span className="section-label">Prova Social</span>
           <h2
             id="testimonials-heading"
-            className="heading-display text-4xl lg:text-5xl mt-4 mb-4"
+            className="heading-display text-3xl lg:text-5xl mt-4 mb-4"
           >
             Quem Confia na{" "}
             <span className="text-gradient-gold">Raymond Towa</span>
           </h2>
           <div className="gold-divider mx-auto mb-6" />
-          <p className="text-graphite-muted text-lg max-w-xl mx-auto">
+          <p className="text-graphite-muted text-sm lg:text-lg max-w-xl mx-auto">
             Depoimentos reais de síndicos, proprietários e administradores que
             escolheram a excelência.
           </p>

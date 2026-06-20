@@ -82,7 +82,7 @@
 
   /* Primary CTA Button — magnetic WhatsApp */
   .btn-primary {
-    @apply inline-flex items-center gap-2.5 px-8 py-4 rounded-xl
+    @apply inline-flex items-center gap-2 px-5 py-3 sm:px-8 sm:py-4 rounded-xl
            bg-gold text-white font-semibold text-sm tracking-wide
            transition-all duration-300 ease-out
            hover:bg-gold-light hover:-translate-y-0.5
@@ -92,7 +92,7 @@
 
   /* Ghost outline button */
   .btn-ghost {
-    @apply inline-flex items-center gap-2.5 px-8 py-4 rounded-xl
+    @apply inline-flex items-center gap-2 px-5 py-3 sm:px-8 sm:py-4 rounded-xl
            border border-gold/40 text-graphite font-semibold text-sm tracking-wide
            transition-all duration-300 ease-out
            hover:border-gold hover:text-gold hover:bg-gold/5
@@ -121,8 +121,8 @@
 
   /* Testimonial card */
   .testimonial-card {
-    @apply flex-shrink-0 w-80 rounded-2xl bg-white border border-graphite/5
-           shadow-[var(--shadow-card)] p-6 mx-3;
+    @apply flex-shrink-0 w-[17rem] sm:w-80 rounded-2xl bg-white border border-graphite/5
+           shadow-[var(--shadow-card)] p-4 sm:p-6 mx-2 sm:mx-3;
   }
 
   /* Nav link */

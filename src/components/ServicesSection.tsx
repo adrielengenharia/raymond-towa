@@ -182,10 +182,10 @@ function ServiceCard({
       <div
         className={`relative overflow-hidden ${
           service.size === "large"
-            ? "h-56 lg:h-72"
+            ? "h-28 sm:h-44 lg:h-72"
             : service.size === "medium"
-            ? "h-44"
-            : "h-36"
+            ? "h-24 sm:h-36 lg:h-44"
+            : "h-20 sm:h-28 lg:h-36"
         }`}
       >
         <Image
@@ -219,7 +219,7 @@ function ServiceCard({
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col gap-3">
+      <div className="p-4 lg:p-6 flex flex-col gap-2 lg:gap-3">
         <div>
           <p className="section-label text-[10px] mb-1">{service.subtitle}</p>
           <h3 className="font-display font-bold text-graphite text-lg leading-tight">
@@ -257,14 +257,14 @@ function ServiceCard({
 function SectionHeader() {
   return (
     <motion.div
-      className="text-center max-w-2xl mx-auto mb-16"
+      className="text-center max-w-2xl mx-auto mb-8 lg:mb-16"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <span className="section-label">Ecossistema de Serviços</span>
-      <h2 className="heading-display text-4xl lg:text-5xl mt-4 mb-6">
+      <h2 className="heading-display text-3xl lg:text-5xl mt-4 mb-6">
         Soluções Completas para{" "}
         <span className="text-gradient-gold">Cada Necessidade</span>
       </h2>
@@ -283,7 +283,7 @@ export default function ServicesSection() {
   return (
     <section
       id="servicos"
-      className="py-24 lg:py-32 bg-cream relative overflow-hidden"
+      className="py-12 lg:py-32 bg-cream relative overflow-hidden"
       aria-labelledby="services-heading"
     >
       {/* Subtle background texture */}
@@ -298,7 +298,7 @@ export default function ServicesSection() {
         <SectionHeader />
 
         {/* Bento Grid Assimétrico */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 auto-rows-min">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 auto-rows-min">
           {/* Row 1 — Large cards */}
           <div className="md:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[0]} index={0} />

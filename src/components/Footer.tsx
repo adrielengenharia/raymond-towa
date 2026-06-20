@@ -80,9 +80,9 @@ export default function Footer() {
       />
 
       {/* Main Grid */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 relative">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-10 lg:py-20 relative">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
