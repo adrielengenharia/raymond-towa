@@ -109,12 +109,6 @@ export default function Footer() {
                 </p>
               </div>
             </Link>
-
-            <p className="text-sm text-white/60 leading-relaxed">
-              Soluções complexas, gestão inteligente. Otimizando o tempo e elevando
-              a qualidade de vida no Recreio dos Bandeirantes.
-            </p>
-
             {/* CNPJ em destaque */}
             <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-gold/20 w-fit">
               <FileText size={14} className="text-gold flex-shrink-0" />

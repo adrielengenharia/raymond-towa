@@ -48,6 +48,19 @@ export default function HeroSection() {
 
       {/* ── Background Elements ── */}
       <div className="absolute inset-0 pointer-events-none">
+        {/* Imagem de fundo no mobile com transparência bem baixa */}
+        <div className="absolute inset-0 lg:hidden opacity-[0.07] mix-blend-multiply">
+          <Image
+            src="/hero-bg.jpg"
+            alt="Fundo Raymond Towa Group"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        </div>
+        {/* Gradiente adicional para garantir legibilidade no mobile */}
+        <div className="absolute inset-0 lg:hidden bg-gradient-to-b from-cream/95 via-cream/80 to-cream/95" />
+
         {/* Gradient blobs */}
         <div
           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-[0.06]"

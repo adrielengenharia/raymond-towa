@@ -10,6 +10,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import PortfolioSection from "@/components/PortfolioSection";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
@@ -29,6 +30,9 @@ export default function HomePage() {
 
         {/* 2. Ecossistema de Serviços — Bento Grid Assimétrico */}
         <ServicesSection />
+
+        {/* 2.5. Portfólio — Fotos Reais de Serviços Concluídos */}
+        <PortfolioSection />
 
         {/* 3. Institucional — Liderança com Propósito */}
         <AboutSection />

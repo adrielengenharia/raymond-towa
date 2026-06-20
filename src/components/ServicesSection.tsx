@@ -43,7 +43,7 @@ const SERVICES: Service[] = [
     title: "Manutenção de Condomínios",
     subtitle: "Gestão Completa de Áreas Comuns",
     description:
-      "Conservação profissional de áreas comuns, fachadas, portarias e paisagismo. Nossa equipe garante a valorização e a apresentação impecável do seu condomínio, com relatórios de acompanhamento e resposta ágil a qualquer demanda.",
+      "Conservação completa de fachadas, portarias e áreas comuns, garantindo valorização do patrimônio com relatórios e atendimento ágil.",
     icon: Building2,
     image: "/service-condominio.jpg",
     imageAlt: "Área comum de condomínio premium conservada pela Raymond Towa Group",
@@ -55,7 +55,7 @@ const SERVICES: Service[] = [
     title: "Conservação Predial e Domiciliar",
     subtitle: "Pós-Obra · Cozinhas Gourmet · Banheiros",
     description:
-      "Limpezas técnicas pós-obra com remoção de resíduos de argamassa, cal e tinta. Higienização profunda de cozinhas gourmet, banheiros de alto padrão e acabamentos premium, devolvendo o imóvel em condição de entrega.",
+      "Limpeza pós-obra técnica e higienização profunda de acabamentos de luxo, entregando o imóvel pronto para morar com máxima perfeição.",
     icon: Sparkles,
     image: "/service-pos-obra.jpg",
     imageAlt: "Apartamento após limpeza pós-obra pela Raymond Towa Group",
@@ -66,7 +66,7 @@ const SERVICES: Service[] = [
     title: "Manutenção de Elevadores",
     subtitle: "Inspeção e Conservação",
     description:
-      "Supervisão periódica, limpeza interna e reporte de anomalias em elevadores, garantindo segurança e funcionamento dentro das normas da ABNT.",
+      "Acompanhamento periódico, limpeza técnica e reporte de anormalidades, garantindo total segurança operacional em elevadores.",
     icon: ArrowUpDown,
     image: "/service-elevador-ai.jpg",
     imageAlt: "Técnico realizando manutenção de elevador em condomínio",
@@ -77,7 +77,7 @@ const SERVICES: Service[] = [
     title: "Chaves Elétricas",
     subtitle: "Painéis e Quadros Elétricos",
     description:
-      "Verificação, substituição e conservação de disjuntores, quadros de distribuição e chaves elétricas, assegurando a conformidade e segurança da instalação.",
+      "Inspeção e substituição de disjuntores e quadros elétricos de distribuição, assegurando segurança total à instalação.",
     icon: Zap,
     image: "/service-eletrica-ai.jpg",
     imageAlt: "Quadro elétrico sendo inspecionado por técnico especializado",
@@ -88,7 +88,7 @@ const SERVICES: Service[] = [
     title: "Jardinagem e Paisagismo",
     subtitle: "Áreas Verdes Premium",
     description:
-      "Criação e manutenção de jardins, gramados e canteiros em condomínios. Plantio, podas, adubação e irrigação com padrão de jardinagem de hotel boutique.",
+      "Manutenção de canteiros, podas e irrigação profissional com padrão estético diferenciado para áreas verdes de condomínios.",
     icon: Leaf,
     image: "/service-jardim-ai.jpg",
     imageAlt: "Jardim tropical impecável de condomínio de luxo",
@@ -99,7 +99,7 @@ const SERVICES: Service[] = [
     title: "Pintura Predial",
     subtitle: "Fachadas e Interiores",
     description:
-      "Pintura técnica de fachadas, corredores e áreas internas com tintas de alta durabilidade. Preparação de superfície, selagem e acabamento premium.",
+      "Serviço completo de selagem, preparação e acabamento de fachadas e interiores com tintas de alta resistência.",
     icon: Paintbrush,
     image: "/service-pintura-ai.jpg",
     imageAlt: "Equipe profissional realizando pintura de fachada predial",
@@ -110,7 +110,7 @@ const SERVICES: Service[] = [
     title: "Higienização de Caixas d'Água",
     subtitle: "Limpeza e Laudos Técnicos",
     description:
-      "Limpeza, desinfecção e higienização completa de reservatórios de água, com emissão de laudo técnico conforme a Portaria MS 888/2021 e normas da ABNT NBR 5626.",
+      "Desinfecção e limpeza profunda de reservatórios, com emissão de laudo técnico em conformidade com as normas sanitárias.",
     icon: Droplets,
     image: "/service-caixa-ai.jpg",
     imageAlt: "Higienização profissional de caixa d'água com equipamentos especializados",
@@ -121,7 +121,7 @@ const SERVICES: Service[] = [
     title: "Porteiros Eletrônicos Control ID",
     subtitle: "Tecnologia de Acesso Premium",
     description:
-      "Instalação, configuração e manutenção de sistemas de porteiro eletrônico Control ID com reconhecimento facial, controle de acesso e integração com câmeras IP.",
+      "Implantação de controles de acesso Control ID com reconhecimento facial e integração de segurança.",
     icon: Shield,
     image: "/service-porteiro-ai.jpg",
     imageAlt: "Sistema de porteiro eletrônico Control ID instalado em condomínio premium",
@@ -132,7 +132,7 @@ const SERVICES: Service[] = [
     title: "Camareiras e Suporte Residencial",
     subtitle: "Hotel-Grade em Sua Casa",
     description:
-      "Serviço de camareira com padrão hoteleiro de 5 estrelas para residências, apartamentos de alto padrão e short stays. Organização, limpeza profunda e arrumação com protocolo premium.",
+      "Atendimento residencial exclusivo com padrão de hotelaria 5 estrelas, arrumação refinada e suporte operacional diário.",
     icon: Users,
     image: "/service-camareira-ai.jpg",
     imageAlt: "Camareira profissional arrumando quarto de alto padrão",
@@ -143,7 +143,7 @@ const SERVICES: Service[] = [
     title: "Suporte Familiar — Babás",
     subtitle: "Cuidado e Confiança",
     description:
-      "Intermediação e gestão de profissionais de cuidado infantil qualificadas, com verificação de referências e alinhamento com as necessidades específicas de cada família.",
+      "Gestão e seleção de babás e cuidadoras com verificação rigorosa de referências e alinhamento familiar.",
     icon: Baby,
     image: "/service-babas-ai.jpg",
     imageAlt: "Cuidado infantil profissional com bebê em ambiente seguro",
@@ -298,42 +298,42 @@ export default function ServicesSection() {
         <SectionHeader />
 
         {/* Bento Grid Assimétrico */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 auto-rows-min">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 auto-rows-min">
           {/* Row 1 — Large cards */}
-          <div className="md:col-span-2 lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[0]} index={0} />
           </div>
-          <div className="md:col-span-2 lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[1]} index={1} />
           </div>
 
           {/* Row 2 — Mixed */}
-          <div className="lg:col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <ServiceCard service={SERVICES[2]} index={2} />
           </div>
-          <div className="lg:col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <ServiceCard service={SERVICES[3]} index={3} />
           </div>
-          <div className="lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[4]} index={4} />
           </div>
 
           {/* Row 3 — Mixed */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[5]} index={5} />
           </div>
-          <div className="lg:col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <ServiceCard service={SERVICES[6]} index={6} />
           </div>
-          <div className="lg:col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <ServiceCard service={SERVICES[7]} index={7} />
           </div>
 
           {/* Row 4 */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[8]} index={8} />
           </div>
-          <div className="lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <ServiceCard service={SERVICES[9]} index={9} />
           </div>
         </div>
