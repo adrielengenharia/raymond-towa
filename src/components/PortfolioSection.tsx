@@ -181,7 +181,7 @@ export default function PortfolioSection() {
         {/* Grid layout */}
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((proj) => (
@@ -203,7 +203,7 @@ export default function PortfolioSection() {
                     src={proj.image}
                     alt={proj.title}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Hover Overlay */}
@@ -213,21 +213,21 @@ export default function PortfolioSection() {
                     </div>
                   </div>
                   {/* Category Tag */}
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-graphite font-bold text-[9px] uppercase tracking-wider shadow-sm">
+                  <div className="absolute top-2 left-2 sm:top-4 sm:left-4 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/90 backdrop-blur-sm text-graphite font-bold text-[7px] sm:text-[9px] uppercase tracking-wider shadow-sm">
                     {proj.categoryLabel}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-5 flex flex-col gap-2">
-                  <div className="flex items-center gap-1.5 text-gold text-[10px] font-medium uppercase tracking-wider">
-                    <MapPin size={10} />
+                <div className="p-3 sm:p-5 flex flex-col gap-1 sm:gap-2">
+                  <div className="flex items-center gap-1 text-gold text-[8px] sm:text-[10px] font-medium uppercase tracking-wider">
+                    <MapPin size={9} className="sm:w-2.5 sm:h-2.5" />
                     {proj.location}
                   </div>
-                  <h3 className="font-display font-bold text-graphite text-base leading-snug group-hover:text-gold transition-colors duration-200">
+                  <h3 className="font-display font-bold text-graphite text-xs sm:text-base leading-snug group-hover:text-gold transition-colors duration-200 line-clamp-2">
                     {proj.title}
                   </h3>
-                  <p className="text-xs text-graphite-muted leading-relaxed">
+                  <p className="text-[10px] sm:text-xs text-graphite-muted leading-relaxed line-clamp-2">
                     {proj.description}
                   </p>
                 </div>
