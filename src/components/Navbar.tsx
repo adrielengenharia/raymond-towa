@@ -73,7 +73,7 @@ export default function Navbar() {
               aria-label="Raymond Towa Group – Página Inicial"
               id="navbar-logo"
             >
-              <div className="relative w-11 h-11 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative w-11 h-11 rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo-leao.png"
                   alt="Leão Dourado – Raymond Towa Group"

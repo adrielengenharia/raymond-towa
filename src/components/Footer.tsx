@@ -92,7 +92,7 @@ export default function Footer() {
           <div className="lg:col-span-1 flex flex-col gap-6">
             {/* Logo */}
             <Link href="#hero" className="flex items-center gap-3 group w-fit">
-              <div className="relative w-12 h-12">
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
                 <Image
                   src="/logo-leao.png"
                   alt="Raymond Towa Group – Logotipo"
