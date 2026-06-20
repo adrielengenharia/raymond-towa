@@ -6,9 +6,8 @@
  * Scroll Reveal assíncrono via Framer Motion.
  */
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 import {
   Building2,
   Sparkles,
@@ -152,12 +151,7 @@ const SERVICES: Service[] = [
   },
 ];
 
-/* ─── Reveal Hook ──────────────────────────────────────────── */
-function useScrollReveal() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-  return { ref, isInView };
-}
+
 
 /* ─── Card Components ──────────────────────────────────────── */
 function ServiceCard({
@@ -167,17 +161,16 @@ function ServiceCard({
   service: Service;
   index: number;
 }) {
-  const { ref, isInView } = useScrollReveal();
   const Icon = service.icon;
 
   return (
     <motion.article
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
       transition={{
-        duration: 0.7,
-        delay: index * 0.08,
+        duration: 0.5,
+        delay: (index % 4) * 0.07,
         ease: [0.22, 1, 0.36, 1],
       }}
       className={`service-card gold-shimmer group ${
@@ -199,8 +192,10 @@ function ServiceCard({
           src={service.image}
           alt={service.imageAlt}
           fill
+          priority={index < 2}
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={75}
           onError={(e) => {
             // Fallback para placeholder se imagem não existir
             const target = e.target as HTMLImageElement;
@@ -260,14 +255,13 @@ function ServiceCard({
 
 /* ─── Section Header ───────────────────────────────────────── */
 function SectionHeader() {
-  const { ref, isInView } = useScrollReveal();
   return (
     <motion.div
-      ref={ref}
       className="text-center max-w-2xl mx-auto mb-16"
       initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <span className="section-label">Ecossistema de Serviços</span>
       <h2 className="heading-display text-4xl lg:text-5xl mt-4 mb-6">

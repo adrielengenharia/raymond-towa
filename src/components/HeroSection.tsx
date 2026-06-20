@@ -6,10 +6,9 @@
  * scroll indicator animado e background com gradiente suave.
  */
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { MessageCircle, ChevronDown, Sparkles, Shield, Clock } from "lucide-react";
 import Image from "next/image";
-import { useRef } from "react";
 
 const WHATSAPP_URL =
   "https://wa.me/5521995711553?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
@@ -39,23 +38,16 @@ const STATS = [
 ];
 
 export default function HeroSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-
-  /* Parallax suave no fundo */
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
     <section
       id="hero"
-      ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cream"
       aria-labelledby="hero-heading"
     >
 
       {/* ── Background Elements ── */}
-      <motion.div className="absolute inset-0 pointer-events-none" style={{ y: bgY }}>
+      <div className="absolute inset-0 pointer-events-none">
         {/* Gradient blobs */}
         <div
           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-[0.06]"
@@ -83,7 +75,7 @@ export default function HeroSection() {
           </defs>
           <rect width="100%" height="100%" fill="url(#hero-grid)" />
         </svg>
-      </motion.div>
+      </div>
 
       {/* ── Main Content ── */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-0">
@@ -251,7 +243,7 @@ export default function HeroSection() {
       {/* ── Scroll Indicator ── */}
       <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
-        style={{ opacity }}
+        initial={{ opacity: 1 }}
         onClick={() => document.querySelector("#servicos")?.scrollIntoView({ behavior: "smooth" })}
         aria-label="Rolar para serviços"
         id="hero-scroll-indicator"
