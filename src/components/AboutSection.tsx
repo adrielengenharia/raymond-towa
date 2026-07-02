@@ -2,8 +2,8 @@
 
 /**
  * Seção Institucional — Nossa Essência: Liderança com Propósito
- * Storytelling dos fundadores Joseli da Silva Raimundo (CEO) e Fabio Raimundo (Co-CEO),
- * com composição visual dupla (foto corporativa + mão na massa) e texto empático.
+ * Storytelling da fundadora Josi Raimundo (CEO),
+ * com composição visual focada em sua liderança e texto inspirador.
  */
 
 import { motion, useInView } from "framer-motion";
@@ -24,7 +24,7 @@ const PILLARS = [
   {
     icon: Heart,
     title: "Gestão Humana",
-    description: "Um casal unido pela mesma visão: servir com excelência e cuidar com afeto.",
+    description: "Uma liderança focada em servir com excelência e cuidar com afeto e proximidade.",
   },
   {
     icon: TrendingUp,
@@ -99,16 +99,16 @@ export default function AboutSection() {
               <p className="text-base sm:text-xl lg:text-2xl font-display font-medium text-graphite leading-relaxed pl-5 sm:pl-6">
                 "Construímos este grupo sobre um alicerce que nenhum manual ensina:{" "}
                 <span className="text-gold font-semibold">
-                  o casamento entre o amor pelo que fazemos e a obsessão pela excelência.
+                  a união entre o amor pelo que fazemos e a obsessão pela excelência.
                 </span>
+                "
               </p>
             </div>
 
             <div className="space-y-4 text-graphite-muted leading-relaxed">
               <p>
                 A <strong className="text-graphite">Raymond Towa Group LTDA</strong> nasceu da
-                visão compartilhada de Joseli da Silva Raimundo e Fabio Raimundo — um casal unido
-                não apenas pela vida, mas por uma missão comum: resolver os gargalos mais complexos
+                visão de Josi Raimundo — uma líder movida por uma missão clara: resolver os gargalos mais complexos
                 da gestão condominial e residencial com agilidade cirúrgica.
               </p>
               <p>
@@ -121,23 +121,17 @@ export default function AboutSection() {
                 resultado.
               </p>
               <p>
-                A força do grupo está na sinergia entre seus fundadores: Joseli (CEO) traz a visão
-                operacional e o relacionamento humano com clientes, enquanto Fabio (Co-CEO) domina
-                a execução técnica e a supervisão de campo. Juntos, eles criam um ciclo virtuoso
-                que muito poucos concorrentes conseguem replicar.
+                A força do grupo está na dedicação e no conhecimento prático de sua fundadora: Josi traz a visão
+                operacional, o relacionamento próximo com clientes e domina a excelência na execução.
+                Ela cria um ciclo virtuoso de qualidade que muito poucos concorrentes conseguem replicar.
               </p>
             </div>
 
             {/* Assinatura dos fundadores */}
             <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-graphite/8">
               <div>
-                <p className="font-display font-bold text-graphite text-sm sm:text-lg">Joseli da Silva Raimundo</p>
+                <p className="font-display font-bold text-graphite text-sm sm:text-lg">Josi Raimundo</p>
                 <p className="text-xs sm:text-sm text-gold font-medium">CEO · Raymond Towa Group LTDA</p>
-              </div>
-              <div className="w-px h-8 sm:h-12 bg-gold/20" />
-              <div>
-                <p className="font-display font-bold text-graphite text-sm sm:text-lg">Fabio Raimundo</p>
-                <p className="text-xs sm:text-sm text-gold font-medium">Co-CEO · Diretor de Operações</p>
               </div>
             </div>
 
@@ -189,8 +183,8 @@ export default function AboutSection() {
               >
                 <div className="relative aspect-[3/4]">
                   <Image
-                    src="/donos-corporativo.jpg"
-                    alt="Joseli da Silva Raimundo (CEO) e Fabio Raimundo (Co-CEO) – Foto corporativa oficial da Raymond Towa Group"
+                    src="/josy-raimundo.png"
+                    alt="Josi Raimundo (CEO) – Foto corporativa oficial da Raymond Towa Group"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -206,40 +200,10 @@ export default function AboutSection() {
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="gold-divider mb-3" />
                     <p className="text-white font-display font-bold text-lg leading-tight">
-                      Joseli & Fabio Raimundo
+                      Josi Raimundo
                     </p>
                     <p className="text-gold-light text-sm font-medium mt-0.5">
-                      CEO & Co-CEO · Raymond Towa Group LTDA
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* ── Card Secundário: Mão na Massa (sobreposto) ── */}
-              <motion.div
-                className="hidden sm:block absolute -bottom-10 -right-8 lg:-right-14 w-52 lg:w-60 rounded-2xl overflow-hidden shadow-luxury border-2 border-white z-20 rotate-2"
-                initial={{ opacity: 0, scale: 0.8, rotate: 8 }}
-                animate={isInView ? { opacity: 1, scale: 1, rotate: 2 } : {}}
-                transition={{ delay: 0.7, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ rotate: 0, scale: 1.03 }}
-              >
-                <div className="relative aspect-[3/4]">
-                  <Image
-                    src="/donos-execucao.jpg"
-                    alt="Joseli e Fabio Raimundo em atividade – Limpeza pós-obra profissional"
-                    fill
-                    className="object-cover"
-                    sizes="240px"
-                    onError={(e) => {
-                      const t = e.target as HTMLImageElement;
-                      t.src = "https://placehold.co/400x533/1F2937/D4AF37?text=Em+Execu%C3%A7%C3%A3o";
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-graphite/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-white text-xs font-bold leading-tight">Na Prática 💪</p>
-                    <p className="text-gold-light text-[10px] mt-0.5 leading-tight">
-                      Limpeza Pós-Obra Profissional
+                      CEO · Raymond Towa Group LTDA
                     </p>
                   </div>
                 </div>
@@ -247,7 +211,7 @@ export default function AboutSection() {
 
               {/* ── Legenda Conceitual ── */}
               <motion.div
-                className="hidden sm:block absolute -top-6 -left-6 lg:-left-12 bg-white rounded-2xl shadow-luxury px-5 py-4 max-w-[200px] z-20 border border-gold/10"
+                className="hidden sm:block absolute -bottom-6 -left-6 lg:-left-12 bg-white rounded-2xl shadow-luxury px-5 py-4 max-w-[200px] z-20 border border-gold/10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.9, duration: 0.6 }}
@@ -278,7 +242,7 @@ export default function AboutSection() {
             id="about-whatsapp-cta"
             className="btn-primary"
           >
-            Fale Diretamente com os Fundadores
+            Fale Diretamente com a CEO
           </a>
         </motion.div>
       </div>

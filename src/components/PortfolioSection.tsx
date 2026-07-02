@@ -181,7 +181,7 @@ export default function PortfolioSection() {
         {/* Grid layout */}
         <motion.div
           layout
-          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((proj) => (
@@ -192,7 +192,7 @@ export default function PortfolioSection() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 key={proj.id}
-                className="group relative bg-cream rounded-2xl overflow-hidden shadow-card hover:shadow-luxury transition-all duration-300 border border-graphite/5"
+                className="group relative bg-cream rounded-xl overflow-hidden shadow-card hover:shadow-luxury transition-all duration-300 border border-graphite/5 flex flex-col"
               >
                 {/* Photo container */}
                 <div
@@ -208,26 +208,26 @@ export default function PortfolioSection() {
                   />
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-graphite/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-gold transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                      <ZoomIn size={18} />
+                    <div className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-gold transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                      <ZoomIn size={14} />
                     </div>
                   </div>
                   {/* Category Tag */}
-                  <div className="absolute top-2 left-2 sm:top-4 sm:left-4 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/90 backdrop-blur-sm text-graphite font-bold text-[7px] sm:text-[9px] uppercase tracking-wider shadow-sm">
+                  <div className="absolute top-1.5 left-1.5 sm:top-4 sm:left-4 px-1.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/90 backdrop-blur-sm text-graphite font-bold text-[6px] sm:text-[9px] uppercase tracking-wider shadow-sm">
                     {proj.categoryLabel}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-3 sm:p-5 flex flex-col gap-1 sm:gap-2">
-                  <div className="flex items-center gap-1 text-gold text-[8px] sm:text-[10px] font-medium uppercase tracking-wider">
-                    <MapPin size={9} className="sm:w-2.5 sm:h-2.5" />
-                    {proj.location}
+                <div className="p-2 sm:p-5 flex flex-col gap-0.5 sm:gap-2 flex-grow">
+                  <div className="flex items-center gap-1 text-gold text-[7px] sm:text-[10px] font-medium uppercase tracking-wider">
+                    <MapPin size={8} className="sm:w-2.5 sm:h-2.5 flex-shrink-0" />
+                    <span className="truncate">{proj.location}</span>
                   </div>
-                  <h3 className="font-display font-bold text-graphite text-xs sm:text-base leading-snug group-hover:text-gold transition-colors duration-200 line-clamp-2">
+                  <h3 className="font-display font-bold text-graphite text-[10px] leading-tight sm:text-base sm:leading-snug group-hover:text-gold transition-colors duration-200 line-clamp-2 mt-0.5">
                     {proj.title}
                   </h3>
-                  <p className="text-[10px] sm:text-xs text-graphite-muted leading-relaxed line-clamp-2">
+                  <p className="text-[8px] sm:text-xs text-graphite-muted leading-tight sm:leading-relaxed line-clamp-2 mt-0.5">
                     {proj.description}
                   </p>
                 </div>

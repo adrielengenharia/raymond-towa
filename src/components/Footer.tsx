@@ -43,8 +43,7 @@ const SERVICES_LIST = [
 ];
 
 const EMAILS = [
-  { address: "joseliceo@jraymondgroup.com.br", label: "Joseli · CEO" },
-  { address: "fabioceo@jraymondgroup.com.br", label: "Fabio · Co-CEO" },
+  { address: "joseliceo@jraymondgroup.com.br", label: "Josy · CEO" },
   { address: "servicos@jraymondgroup.com.br", label: "Solicitação de Serviços" },
 ];
 
