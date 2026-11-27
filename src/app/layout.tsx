@@ -43,6 +43,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Raymond Towa Group LTDA" }],
   creator: "Raymond Towa Group LTDA",
+  icons: {
+    icon: [{ url: "/logo-leao.png", type: "image/png" }],
+    shortcut: ["/logo-leao.png"],
+    apple: [{ url: "/logo-leao.png", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -160,7 +165,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#F9FAFB" />
         <script
           type="application/ld+json"
